@@ -152,4 +152,50 @@ else
     echo "Skipping Guake"
 fi
 
+# Installs Gimp
+echo " "
+echo -n "${yellow}Install Gimp (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing Gimp"
+    sudo apt-get install gimp
+else
+    echo "Skipping Gimp"
+fi
+
+# Installs Rhythmbox
+echo " "
+echo -n "${yellow}Install Rhythmbox (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing Rhythmbox"
+    sudo apt-get install rhythmbox
+else
+    echo "Skipping Rhythmbox"
+fi
+
+# Installs LibreOffice
+echo " "
+echo -n "${yellow}Install LibreOffice (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing LibreOffice"
+    sudo apt-get install libreoffice
+    echo "Done!!!"
+else
+    echo "Skipping LibreOffice"
+fi
+
+# Installs Transmission
+echo " "
+echo -n "${yellow}Install Transmission (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing Transmission"
+    sudo apt-get install transmission-gtk
+    echo "Done!!!"
+else
+    echo "Skipping Transmission"
+fi
+
 read
