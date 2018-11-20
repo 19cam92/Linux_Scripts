@@ -14,33 +14,6 @@ else
     echo "Skipping Google Chrome"
 fi
 
-# Installs LibreOffice
-echo " "
-echo -n "${yellow}Install LibreOffice (y/n)? ${reset}"
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-    echo "Installing LibreOffice"
-    sudo apt-get install libreoffice
-    echo "Done!!!"
-else
-    echo "Skipping LibreOffice"
-fi
-
-# Installs Ubuntu Cleaner
-echo " "
-echo -n "${yellow}Install Ubuntu Cleaner (y/n)? ${reset}"
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-    echo "Installing Ubuntu Cleaner"
-    sudo apt install software-properties-common
-    sudo add-apt-repository ppa:gerardpuig/ppa
-    sudo apt update
-    sudo apt install ubuntu-cleaner
-    echo "Done!!!"
-else
-    echo "Skipping Ubuntu Cleaner"
-fi
-
 # Installs Ubuntu Kernel Update Utility
 echo " "
 echo -n "${yellow}Install Ubuntu Kernel Update Utility (y/n)? ${reset}"
@@ -99,17 +72,6 @@ else
     echo "Skipping Stellarium"
 fi
 
-# Installs Rhythmbox
-echo " "
-echo -n "${yellow}Install Rhythmbox (y/n)? ${reset}"
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-    echo "Installing Rhythmbox"
-    sudo apt-get install rhythmbox
-else
-    echo "Skipping Rhythmbox"
-fi
-
 # Installs Spotify
 echo " "
 echo -n "${yellow}Install Spotify (y/n)? ${reset}"
@@ -132,17 +94,6 @@ else
     echo "Skipping Steam"
 fi
 
-# Installs Gimp
-echo " "
-echo -n "${yellow}Install Gimp (y/n)? ${reset}"
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-    echo "Installing Gimp"
-    sudo apt-get install gimp
-else
-    echo "Skipping Gimp"
-fi
-
 # Installs Boot-Repair
 echo " "
 echo -n "${yellow}Install Boot-Repair (y/n)? ${reset}"
@@ -155,4 +106,50 @@ if echo "$answer" | grep -iq "^y" ;then
 else
     echo "Skipping Boot-Repair"
 fi
+
+# Installs Stacer
+echo " "
+echo -n "${yellow}Install Stacer (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    sudo add-apt-repository ppa:oguzhaninan/stacer
+    sudo apt-get update
+    sudo apt-get install stacer
+else
+    echo "Skipping Stacer"
+fi
+
+# Installs Discord
+echo " "
+echo -n "${yellow}Install Discord (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing Discord"
+    sudo apt-get install discord
+else
+    echo "Skipping Discord"
+fi
+
+# Installs Cheese
+echo " "
+echo -n "${yellow}Install Cheese (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing Cheese"
+    sudo apt-get install cheese
+else
+    echo "Skipping Cheese"
+fi
+
+# Installs Guake
+echo " "
+echo -n "${yellow}Install Guake (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Installing Guake"
+    sudo apt-get install guake
+else
+    echo "Skipping Guake"
+fi
+
 read
