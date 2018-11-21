@@ -1,5 +1,22 @@
 #!/bin/bash
 
+#Num  Colour    #define         R G B
+
+#0    black     COLOR_BLACK     0,0,0
+#1    red       COLOR_RED       1,0,0
+#2    green     COLOR_GREEN     0,1,0
+#3    yellow    COLOR_YELLOW    1,1,0
+#4    blue      COLOR_BLUE      0,0,1
+#5    magenta   COLOR_MAGENTA   1,0,1
+#6    cyan      COLOR_CYAN      0,1,1
+#7    white     COLOR_WHITE     1,1,1
+
+yellow=`tput setaf 3`
+green=`tput setaf 2`
+cyan=`tput setaf 6`
+red=`tput setaf 1`
+reset=`tput sgr0`
+
 # Installs google chrome
 echo " "
 echo -n "${yellow}Install Google Chrome (y/n)? ${reset}"
@@ -181,5 +198,30 @@ if echo "$answer" | grep -iq "^y" ;then
 else
     echo "Skipping Transmission"
 fi
+
+# Installs Htop
+echo " "
+echo -n "${yellow}Install Htop (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    sudo apt-get install htop
+    echo "Done!!!"
+else
+    echo "Skipping Htop"
+fi
+
+#Install ADB/Fastboot
+echo " "
+echo -n "${yellow}Install ADB/Fastboot (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    sudo apt-get install adb
+    sudo apt-get install fastboot
+    echo "Done!!!"
+else
+    echo "Skipping ADB/Fastboot"
+fi
+
+echo "${green}Done!!!${reset}"
 
 read
