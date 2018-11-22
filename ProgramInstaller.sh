@@ -25,7 +25,6 @@ if echo "$answer" | grep -iq "^y" ;then
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb
     rm -f google-chrome-stable_current_amd64.deb
-    echo "Done!!!"
 else
     echo "Skipping Google Chrome"
 fi
@@ -38,7 +37,6 @@ if echo "$answer" | grep -iq "^y" ;then
     sudo add-apt-repository ppa:teejee2008/ppa
     sudo apt-get update
     sudo apt-get install ukuu
-    echo "Done!!!"
 else
     echo "Skipping Ubuntu Kernel Update Utility"
 fi
@@ -183,7 +181,6 @@ echo -n "${yellow}Install LibreOffice (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt-get install libreoffice
-    echo "Done!!!"
 else
     echo "Skipping LibreOffice"
 fi
@@ -194,7 +191,6 @@ echo -n "${yellow}Install Transmission (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt-get install transmission-gtk
-    echo "Done!!!"
 else
     echo "Skipping Transmission"
 fi
@@ -205,7 +201,6 @@ echo -n "${yellow}Install Htop (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt-get install htop
-    echo "Done!!!"
 else
     echo "Skipping Htop"
 fi
@@ -217,7 +212,6 @@ read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt-get install adb
     sudo apt-get install fastboot
-    echo "Done!!!"
 else
     echo "Skipping ADB/Fastboot"
 fi

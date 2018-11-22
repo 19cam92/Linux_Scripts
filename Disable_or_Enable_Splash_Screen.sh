@@ -17,12 +17,21 @@ cyan=`tput setaf 6`
 red=`tput setaf 1`
 reset=`tput sgr0`
 
-printf '\033]2;%s\007' "Enabling Boot Logo"
-echo "${yellow}Enabling Boot Logo${reset}"
+printf '\033]2;%s\007' "Disabling Boot Logo"
 
+# Disables the Boot Logo
 echo " "
-sudo sed '/GRUB_CMDLINE_LINUX_DEFAULT=/ s/""/"quiet splash"/g' -i /etc/default/grub
-sudo update-grub
+echo -n "${yellow}Disabling Boot Logo (y/n)? ${reset}"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Disabling"
+    sudo sed '/GRUB_CMDLINE_LINUX_DEFAULT=/ s/"quiet splash"/""/g' -i /etc/default/grub
+    sudo update-grub
+else
+    echo "Enabling"
+    sudo sed '/GRUB_CMDLINE_LINUX_DEFAULT=/ s/""/"quiet splash"/g' -i /etc/default/grub
+    sudo update-grub
+fi
 
 echo " "
 echo "${green}Done!!!${reset}"

@@ -23,7 +23,6 @@ echo -n "${yellow}Uninstall Google Chrome (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt remove google-chrome-stable
-    echo "Done!!!"
 else
     echo "Skipping Google Chrome"
 fi
@@ -34,7 +33,6 @@ echo -n "${yellow}Uninstall Ubuntu Kernel Update Utility (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt remove ukuu
-    echo "Done!!!"
 else
     echo "Skipping Ubuntu Kernel Update Utility"
 fi
@@ -43,22 +41,7 @@ fi
 echo " "
 echo -n "${yellow}Uninstall VLC Media Player (y/n)? ${reset}"
 read answer
-if echo #Num  Colour    #define         R G B
-
-#0    black     COLOR_BLACK     0,0,0
-#1    red       COLOR_RED       1,0,0
-#2    green     COLOR_GREEN     0,1,0
-#3    yellow    COLOR_YELLOW    1,1,0
-#4    blue      COLOR_BLUE      0,0,1
-#5    magenta   COLOR_MAGENTA   1,0,1
-#6    cyan      COLOR_CYAN      0,1,1
-#7    white     COLOR_WHITE     1,1,1
-
-yellow=`tput setaf 3`
-green=`tput setaf 2`
-cyan=`tput setaf 6`
-red=`tput setaf 1`
-reset=`tput sgr0`"$answer" | grep -iq "^y" ;then
+if echo "$answer" | grep -iq "^y" ;then
     sudo apt remove vlc
 else
     echo "Skipping VLC Media Player"
@@ -99,7 +82,7 @@ echo " "
 echo -n "${yellow}Uninstall Spotify (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
-    sudo apt-get install spotify-client
+    sudo apt remove spotify-client
 else
     echo "Skipping Spotify"
 fi
@@ -151,7 +134,7 @@ echo " "
 echo -n "${yellow}Uninstall Cheese (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
-    sudo apt-get install cheese
+    sudo apt remove cheese
 else
     echo "Skipping Cheese"
 fi
@@ -192,7 +175,6 @@ echo -n "${yellow}Uninstall LibreOffice (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt remove libreoffice
-    echo "Done!!!"
 else
     echo "Skipping LibreOffice"
 fi
@@ -203,7 +185,6 @@ echo -n "${yellow}Uninstall Transmission (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt remove transmission-gtk
-    echo "Done!!!"
 else
     echo "Skipping Transmission"
 fi
@@ -214,7 +195,6 @@ echo -n "${yellow}Unlnstalls Htop (y/n)? ${reset}"
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     sudo apt remove htop
-    echo "Done!!!"
 else
     echo "Skipping Htop"
 fi
@@ -225,7 +205,6 @@ echo -n "${yellow}Unlnstalls ADB/Fastboot (y/n)? ${reset}"
 read answer
 if echo "@answer" | grep -iq "^y" ;then
     sudo apt remove adb && sudo apt remove fastboot
-    echo "Done!!!"
 else
     echo "Skipping ADB/Fastboot"
 fi

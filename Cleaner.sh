@@ -11,5 +11,5 @@ echo "Cleaning Trash Bin"
 rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
 rm -rf /root/.local/share/Trash/*/** &> /dev/null
 echo ""
-echo "DONE"
+echo "Done!!!"
 read

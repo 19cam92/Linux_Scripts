@@ -7,5 +7,5 @@ sudo swapoff -a
 
 echo "Turning on SWAP"
 sudo swapon -a
-echo "DONE"
+echo "Done!!!"
 read
