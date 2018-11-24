@@ -17,8 +17,8 @@ cyan=`tput setaf 6`
 red=`tput setaf 1`
 reset=`tput sgr0`
 
-printf '\033]2;%s\007' "ICleaning Old Package"
-echo "${cyan}Cleaning Old Package"
+printf '\033]2;%s\007' "Turing on SWAP"
+echo "${cyan}Turing on SWAP"
 echo " "
 echo "${cyan}Writing by 19cam92@xda"
 echo "Script version 1.0.0${reset}"
@@ -27,19 +27,11 @@ echo " "
 echo "${red}!!!!          THIS SCRIPT NEEDS ROOT         !!!!${reset}"
 echo "${red}!!!! PLEASE ENTER YOUR PASSWORD WHEN PROMTED !!!!${reset}"
 echo " "
-sudo whoami
+sudo whoam
 
 echo " "
-echo "${yellow}Cleaning Old Package/Configs${reset}"
-sudo apt-get autoremove
-sudo apt-get autoclean
-sudo apt-get clean
-
+echo "${yellow}Turning on SWAP${reset}"
+sudo swapon -a
 echo " "
-echo "${yellow}Cleaning Trash Bin${reset}"
-rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
-rm -rf /root/.local/share/Trash/*/** &> /dev/null
-
-echo ""
 echo "${green}Done!!!!${reset}"
 read

@@ -17,8 +17,8 @@ cyan=`tput setaf 6`
 red=`tput setaf 1`
 reset=`tput sgr0`
 
-printf '\033]2;%s\007' "ICleaning Old Package"
-echo "${cyan}Cleaning Old Package"
+printf '\033]2;%s\007' "Java Versions"
+echo "${cyan}Java Versions"
 echo " "
 echo "${cyan}Writing by 19cam92@xda"
 echo "Script version 1.0.0${reset}"
@@ -30,16 +30,7 @@ echo " "
 sudo whoami
 
 echo " "
-echo "${yellow}Cleaning Old Package/Configs${reset}"
-sudo apt-get autoremove
-sudo apt-get autoclean
-sudo apt-get clean
-
+sudo update-alternatives --config java
 echo " "
-echo "${yellow}Cleaning Trash Bin${reset}"
-rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
-rm -rf /root/.local/share/Trash/*/** &> /dev/null
-
-echo ""
 echo "${green}Done!!!!${reset}"
 read

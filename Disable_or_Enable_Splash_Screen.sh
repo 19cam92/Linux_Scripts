@@ -18,6 +18,16 @@ red=`tput setaf 1`
 reset=`tput sgr0`
 
 printf '\033]2;%s\007' "Disabling Boot Logo"
+echo "${cyan}Disabling Boot Logo"
+echo " "
+echo "${cyan}Writing by 19cam92@xda"
+echo "Script version 1.0.0${reset}"
+
+echo " "
+echo "${red}!!!!          THIS SCRIPT NEEDS ROOT         !!!!${reset}"
+echo "${red}!!!! PLEASE ENTER YOUR PASSWORD WHEN PROMTED !!!!${reset}"
+echo " "
+sudo whoami
 
 # Disables the Boot Logo
 echo " "

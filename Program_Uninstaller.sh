@@ -17,6 +17,18 @@ cyan=`tput setaf 6`
 red=`tput setaf 1`
 reset=`tput sgr0`
 
+printf '\033]2;%s\007' "Program Uninstaller"
+echo "${cyan}Program Uninstaller"
+echo " "
+echo "${cyan}Writing by 19cam92@xda"
+echo "Script version 1.0.0${reset}"
+
+echo " "
+echo "${red}!!!!          THIS SCRIPT NEEDS ROOT         !!!!${reset}"
+echo "${red}!!!! PLEASE ENTER YOUR PASSWORD WHEN PROMTED !!!!${reset}"
+echo " "
+sudo whoami
+
 # Uninstalls google chrome
 echo " "
 echo -n "${yellow}Uninstall Google Chrome (y/n)? ${reset}"
