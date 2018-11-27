@@ -33,7 +33,7 @@ echo " "
 echo "${yellow}Checking for updates${reset}"
 sudo apt-get update
 echo " "
-sudo apt-get install
+sudo apt-get upgrade
 echo " "
 echo "${green}Done!!!!${reset}"
 read
