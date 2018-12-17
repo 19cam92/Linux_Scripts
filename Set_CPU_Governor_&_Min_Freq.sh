@@ -49,7 +49,7 @@ if echo "$answer" | grep -iq "^y" ;then
     echo "${yellow}Setting CPU min freq to 1Ghz${reset}"
     echo 1000000 | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq
 else
-    echo "S${yellow}etting CPU min freq to 800Mhz${reset}"
+    echo "${yellow}Setting CPU min freq to 800Mhz${reset}"
     echo 800000 | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq
 fi
 

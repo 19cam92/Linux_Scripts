@@ -17,8 +17,8 @@ cyan=`tput setaf 6`
 red=`tput setaf 1`
 reset=`tput sgr0`
 
-printf '\033]2;%s\007' "ICleaning Old Package"
-echo "${cyan}Cleaning Old Package"
+printf '\033]2;%s\007' "Cleaning Junk Files"
+echo "${cyan}Cleaning Junk Files"
 echo " "
 echo "${cyan}Writing by 19cam92@xda"
 echo "Script version 1.0.0${reset}"
@@ -29,16 +29,17 @@ echo "${red}!!!! PLEASE ENTER YOUR PASSWORD WHEN PROMTED !!!!${reset}"
 echo " "
 sudo whoami
 
-echo " "
-echo "${yellow}Cleaning Old Package/Configs${reset}"
 sudo apt-get autoremove
 sudo apt-get autoclean
 sudo apt-get clean
 
-echo " "
-echo "${yellow}Cleaning Trash Bin${reset}"
-rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
+rm -rf ~/.local/share/Trash/*/** &> /dev/null
 rm -rf /root/.local/share/Trash/*/** &> /dev/null
+rm -rf ~/.cache/thumbnails
+rm -rf ~/.minecraft/logs
+rm -rf ~/.bash_history
+rm -rf ~/.xsession-errors
+rm -rf ~/.xsession-errors.old
 
 echo ""
 echo "${green}Done!!!!${reset}"
